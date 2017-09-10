@@ -3,8 +3,12 @@
 # numbers, inclusive.
 
 def sum_of_range(array)
-
+  if array[0] > array[1]
+    array.reverse!
+  end 
+  (array[0]..array[1]).to_a.reduce(:+)
 end
+
 
 # Driver code - don't touch anything below this line.
 puts "TESTING sum_of_range..."

@@ -3,8 +3,14 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
-
-end
+  counter = mutation.length 
+  base_word.each_char do |letter| 
+    if mutation.include?(letter)
+      counter -= 1 
+    end 
+  end 
+  counter == 0? true : false 
+end 
 
 # Driver code - don't touch anything below this line.
 puts "TESTING mutation?..."
